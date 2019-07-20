@@ -39,7 +39,13 @@ export class HomePage {
      if(this.currentImage){
 
       this.http.post('finllect.herokuapp.com/test_upload', {key:'img', Payload:this.currentImage}).subscribe(res => {
-        this.showAlert(res)
+        this.showAlert(res);
+
+        //i didnt see the response from ur server cox when i run ionic dev app, it complains of some plugins not loading on time
+        //i've spent some time around it tho', couldnt resolve it
+
+        //TODO work on the actual response 
+        //this.showAlert(res.parseText); //i dont even know if the pass test is correct, cox i didnt see the response yet
       })
       //this.showAlert(this.currentImage)
      }
